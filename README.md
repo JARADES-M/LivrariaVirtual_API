@@ -28,9 +28,9 @@ http://127.0.0.1:8080/v1/books/
 
 ##### A Ser Feito:
 
-- [] Postar comentários para livros. (resenhadas)
-- [] Pesquisa de livros por critérios diversos.
-- [] Manipular um carrinho de compras
-- [] Realizar pedidos
-- [] Acompanhamento o status das entregas realizadas.
-- [] Cadastrar livros
+- [ ] Postar comentários para livros. (resenhadas)
+- [ ] Pesquisa de livros por critérios diversos.
+- [ ] Manipular um carrinho de compras
+- [ ] Realizar pedidos
+- [ ] Acompanhamento o status das entregas realizadas.
+- [ ] Cadastrar livros
