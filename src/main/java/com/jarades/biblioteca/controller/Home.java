@@ -15,7 +15,8 @@ public class Home {
             "<li>Manipular um carrinho de compras</li>" +
             "<li>Realizar pedidos</li>" +
             "<li>Acompanhamento o status das entregas realizadas</li>" +
-            "<li>Cadastrar livros</li> </ul>";
+            "<li>Cadastrar livros</li> </ul>" +
+            "<p>Veja mais detalhes no <a target='_blank' href='https://github.com/JARADES-M/LivrariaVirtual_API'>GitHub</a>.</p>";
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody

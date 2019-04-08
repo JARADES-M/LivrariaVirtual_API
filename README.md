@@ -24,5 +24,13 @@ Rodando a Aplicação localmente, a primeira requisição ficaria da seguinte fo
 http://127.0.0.1:8080/v1/books/
 ```
 
-> Este é o estágio inicial da aplicação
-> ainda não funcional.
+> Este é o estágio inicial da aplicação, ainda não funcional.
+
+##### A Ser Feito:
+
+- [] Postar comentários para livros. (resenhadas)
+- [] Pesquisa de livros por critérios diversos.
+- [] Manipular um carrinho de compras
+- [] Realizar pedidos
+- [] Acompanhamento o status das entregas realizadas.
+- [] Cadastrar livros
