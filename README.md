@@ -16,8 +16,8 @@ virtual deve ter pelo menos funcionalidades para:
 **GET** | `host/v1/books/` | _Retorna uma coleção de Livros_
 **GET** |`host/v1/books/{bookId}` | _Retorna o Livro do **id** informado_
 **POST** |`host/v1/books/` | _Realiza o Cadastro de Um Livro_
-**GET** |`host/v1/books/{id}/comments` | _Retorna uma relação de comentários para o livro do **id** informado_
-**POST** |`host/v1/books/{id}/comments` | _Realiza o cadastro de um comentário para o livro do **id** informado_
+**GET** |`host/v1/books/{bookId}/comments` | _Retorna uma relação de comentários para o livro do **id** informado_
+**POST** |`host/v1/books/{bookId}/comments` | _Realiza o cadastro de um comentário para o livro do **id** informado_
 
 Rodando a Aplicação localmente, a primeira requisição ficaria da seguinte forma.
 ```sh
@@ -28,6 +28,7 @@ http://127.0.0.1:8080/v1/books/
 
 ##### A Ser Feito:
 
+- [x] Retornar todos os livros
 - [ ] Postar comentários para livros. (resenhadas)
 - [ ] Pesquisa de livros por critérios diversos.
 - [ ] Manipular um carrinho de compras
