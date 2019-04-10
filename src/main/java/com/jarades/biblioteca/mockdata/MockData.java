@@ -12,7 +12,7 @@ public class MockData {
     public MockData() {
     }
 
-    private List<User> userList = new ArrayList<User>() {
+    static List<User> userList = new ArrayList<User>() {
         {
             add(new User(77, "João", "joao@email.com"));
             add(new User(33, "José", "josé@email.com"));
@@ -20,7 +20,7 @@ public class MockData {
         }
     };
 
-    private List<Book> bookList = new ArrayList<Book>() {
+    static List<Book> bookList = new ArrayList<Book>() {
         {
             add(new Book(536, "Tim Tim Tam Tam"));
             add(new Book(789, "Rá Tá Tá"));
@@ -40,8 +40,11 @@ public class MockData {
     };
 
 
-    public List<Book> getBooks() {
-        return this.bookList;
+    public static List<Book> getBooks() {
+        return bookList;
+    }
+    public static void register (Book book){
+        bookList.add(book);
     }
 
 }

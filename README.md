@@ -29,7 +29,7 @@ http://127.0.0.1:8080/v1/books/
 ##### A Ser Feito:
 
 - [x] Retornar todos os livros
-- [x] Add Swagger
+- [x] Inclusão de Documentação (Swagger)
 - [ ] Postar comentários para livros. (resenhadas)
 - [ ] Pesquisa de livros por critérios diversos.
 - [ ] Manipular um carrinho de compras

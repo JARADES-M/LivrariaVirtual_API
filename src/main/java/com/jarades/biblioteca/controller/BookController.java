@@ -3,9 +3,7 @@ package com.jarades.biblioteca.controller;
 import com.jarades.biblioteca.resources.Book;
 import com.jarades.biblioteca.service.BookService;
 import com.jarades.biblioteca.service.BookServiceImpl;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,5 +15,10 @@ public class BookController {
     @RequestMapping(value = "/v1/books", method = RequestMethod.GET)
     public List<Book> getBooks(){
         return bookService.getBooks();
+    }
+
+    @RequestMapping(value = "/v1/books", method = RequestMethod.POST)
+    public void setBook(@RequestBody Book book) {
+        bookService.register(book);
     }
 }

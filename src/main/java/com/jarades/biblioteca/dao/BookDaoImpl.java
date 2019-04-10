@@ -9,8 +9,6 @@ import java.util.Map;
 //@Transactional
 public class BookDaoImpl implements BookDao {
 
-    MockData mockData = new MockData();
-
     @Override
     public void comment(Book book) {
 
@@ -18,7 +16,7 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public List<Book> getBooks() {
-        return this.mockData.getBooks();
+        return MockData.getBooks();
     }
 
     @Override
@@ -27,7 +25,7 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public Book register(Book book) {
-        return null;
+    public void register(Book book) {
+        MockData.register(book);
     }
 }

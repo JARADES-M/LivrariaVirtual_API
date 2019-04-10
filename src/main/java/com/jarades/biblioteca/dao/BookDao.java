@@ -9,5 +9,5 @@ public interface BookDao {
     public void comment (Book book);
     public List<Book> getBooks();
     public Book find (Map<String, String> search);
-    public Book register (Book book);
+    public void register (Book book);
 }
