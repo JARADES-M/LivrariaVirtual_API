@@ -1,5 +1,6 @@
 package com.jarades.biblioteca.dao;
 
+import com.jarades.biblioteca.dao.interfaces.BookDao;
 import com.jarades.biblioteca.mockdata.MockData;
 import com.jarades.biblioteca.resources.Book;
 
@@ -9,6 +10,8 @@ import java.util.Map;
 //@Transactional
 public class BookDaoImpl implements BookDao {
 
+    MockData mockData = MockData.getInstance();
+
     @Override
     public void comment(Book book) {
 
@@ -16,7 +19,7 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public List<Book> getBooks() {
-        return MockData.getBooks();
+        return this.mockData.getBooks();
     }
 
     @Override
@@ -26,6 +29,6 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public void register(Book book) {
-        MockData.register(book);
+        this.mockData.register(book);
     }
 }

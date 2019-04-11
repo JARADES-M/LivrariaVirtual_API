@@ -9,10 +9,19 @@ import java.util.List;
 
 public class MockData {
 
-    public MockData() {
+    private MockData() {}
+
+    private static MockData instance;
+
+    public static synchronized MockData getInstance(){
+
+        if (instance == null)
+            instance = new MockData();
+
+        return instance;
     }
 
-    static List<User> userList = new ArrayList<User>() {
+    private List<User> userList = new ArrayList<User>() {
         {
             add(new User(77, "João", "joao@email.com"));
             add(new User(33, "José", "josé@email.com"));
@@ -20,7 +29,7 @@ public class MockData {
         }
     };
 
-    static List<Book> bookList = new ArrayList<Book>() {
+    private List<Book> bookList = new ArrayList<Book>() {
         {
             add(new Book(536, "Tim Tim Tam Tam"));
             add(new Book(789, "Rá Tá Tá"));
@@ -40,11 +49,20 @@ public class MockData {
     };
 
 
-    public static List<Book> getBooks() {
-        return bookList;
+    public List<Book> getBooks() {
+        return this.bookList;
     }
-    public static void register (Book book){
-        bookList.add(book);
+
+    public void register (Book book){
+        this.bookList.add(book);
+    }
+
+    public void comment (Comment comment) {
+        this.commentList.add(comment);
+    }
+
+    public List<Comment> getBookComments () {
+        return null;
     }
 
 }

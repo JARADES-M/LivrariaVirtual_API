@@ -1,7 +1,7 @@
 package com.jarades.biblioteca.controller;
 
 import com.jarades.biblioteca.resources.Book;
-import com.jarades.biblioteca.service.BookService;
+import com.jarades.biblioteca.service.Interfaces.BookService;
 import com.jarades.biblioteca.service.BookServiceImpl;
 import org.springframework.web.bind.annotation.*;
 

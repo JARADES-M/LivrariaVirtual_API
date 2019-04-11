@@ -1,4 +1,4 @@
-package com.jarades.biblioteca.dao;
+package com.jarades.biblioteca.dao.interfaces;
 
 import com.jarades.biblioteca.resources.Book;
 

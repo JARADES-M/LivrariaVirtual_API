@@ -35,4 +35,4 @@ http://127.0.0.1:8080/v1/books/
 - [ ] Manipular um carrinho de compras
 - [ ] Realizar pedidos
 - [ ] Acompanhamento o status das entregas realizadas.
-- [ ] Cadastrar livros
+- [x] Cadastrar livros

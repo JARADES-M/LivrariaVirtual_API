@@ -1,8 +1,9 @@
 package com.jarades.biblioteca.service;
 
-import com.jarades.biblioteca.dao.BookDao;
+import com.jarades.biblioteca.dao.interfaces.BookDao;
 import com.jarades.biblioteca.dao.BookDaoImpl;
 import com.jarades.biblioteca.resources.Book;
+import com.jarades.biblioteca.service.Interfaces.BookService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,7 +31,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book register(Book book) {
-        return null;
+    public void register(Book book) {
+        this.bookDao.register(book);
     }
 }
