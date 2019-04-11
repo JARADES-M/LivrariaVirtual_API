@@ -31,10 +31,10 @@ public class MockData {
 
     private List<Book> bookList = new ArrayList<Book>() {
         {
-            add(new Book(536, "Tim Tim Tam Tam"));
-            add(new Book(789, "Rá Tá Tá"));
-            add(new Book(537, "Sá Rá Vá"));
-            add(new Book(914, "Bu Ti Quê"));
+            add(new Book(536, "Tim Tim Tam Tam", "Jhon", 2015, "Saraiva"));
+            add(new Book(789, "Rá Tá Tá", "Clain", 2011, "Globo"));
+            add(new Book(537, "Sá Rá Vá", "Gandalf", 1997, "Code"));
+            add(new Book(914, "Bu Ti Quê", "Ilton", 2078, "FoxBit"));
         }
     };
 
