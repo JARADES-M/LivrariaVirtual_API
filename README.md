@@ -30,7 +30,7 @@ Novamente, rodando localmente, fica da seguinte forma.
 http://127.0.0.1:8080/swagger-ui.html
 ```
 
-> Este é o estágio inicial da aplicação, ainda não funcional.
+> Todas as funções básicas foram implementadas.
 
 ##### A Ser Feito:
 
