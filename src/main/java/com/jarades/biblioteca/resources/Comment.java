@@ -3,13 +3,13 @@ package com.jarades.biblioteca.resources;
 public class Comment {
 
     private long id;
-    private Book book;
+    private long bookId;
     private User user;
     private String comment;
 
-    public Comment(long id, Book book, User user, String comment) {
+    public Comment(long id, long bookId, User user, String comment) {
         this.id = id;
-        this.book = book;
+        this.bookId = bookId;
         this.user = user;
         this.comment = comment;
     }
@@ -32,12 +32,12 @@ public class Comment {
         this.user = user;
     }
 
-    public Book getBook() {
-        return book;
+    public long getBookId() {
+        return bookId;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setBookId(long bookId) {
+        this.bookId = bookId;
     }
 
     public String getComment() {

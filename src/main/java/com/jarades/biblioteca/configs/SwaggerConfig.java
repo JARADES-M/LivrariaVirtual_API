@@ -34,7 +34,7 @@ public class SwaggerConfig {
                 .apiInfo(apiInfo)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.jarades.biblioteca"))
-                .paths(PathSelectors.ant("/v1/*"))
+                .paths(PathSelectors.ant("/v1/**"))
                 .build();
     }
 

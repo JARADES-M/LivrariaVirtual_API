@@ -40,11 +40,17 @@ public class MockData {
 
     private List<Comment> commentList = new ArrayList<Comment>() {
         {
-            add(new Comment(7983, bookList.get(1), userList.get(2), "Muito Bom!"));
-            add(new Comment(3576, bookList.get(3), userList.get(2), "Muito Bom Mesmo!"));
-            add(new Comment(1234, bookList.get(3), userList.get(0), "Bacana!"));
-            add(new Comment(9531, bookList.get(0), userList.get(1), "Legal!"));
-            add(new Comment(6482, bookList.get(2), userList.get(0), "Né Bom Não!"));
+            add(new Comment(7983, bookList.get(1).getId(), userList.get(2), "Muito Bom!"));
+            add(new Comment(3576, bookList.get(3).getId(), userList.get(2), "Muito Bom Mesmo!"));
+            add(new Comment(1234, bookList.get(3).getId(), userList.get(0), "Bacana!"));
+            add(new Comment(9531, bookList.get(0).getId(), userList.get(1), "Legal!"));
+            add(new Comment(6482, bookList.get(2).getId(), userList.get(0), "Né Bom Não!"));
+        }
+    };
+
+    private List<Book> shoppingCartList = new ArrayList<Book>() {
+        {
+            add(new Book(7755, "My Shop C", "Will", 2054, "Ypsilon"));
         }
     };
 
@@ -61,8 +67,49 @@ public class MockData {
         this.commentList.add(comment);
     }
 
-    public List<Comment> getBookComments () {
-        return null;
+    /* Desconsidere a complexidade desse trexo, foque apenas no resultado */
+    public List<Comment> getBookComments (long id) {
+        List<Comment> bookComments = new ArrayList<>();
+        for(Comment cmt: this.commentList) {
+            if(cmt.getBookId() == id) {
+                bookComments.add(cmt);
+            }
+
+        }
+        return bookComments;
     }
 
+// ----------------------------------------------------------------------------
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
+    }
+
+    public List<Book> getBookList() {
+        return bookList;
+    }
+
+    public void setBookList(List<Book> bookList) {
+        this.bookList = bookList;
+    }
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
+    }
+
+    public List<Book> getShoppingCartList() {
+        return shoppingCartList;
+    }
+
+    public void setShoppingCartList(List<Book> shoppingCartList) {
+        this.shoppingCartList = shoppingCartList;
+    }
 }

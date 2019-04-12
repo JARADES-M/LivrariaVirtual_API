@@ -3,6 +3,7 @@ package com.jarades.biblioteca.dao;
 import com.jarades.biblioteca.dao.interfaces.BookDao;
 import com.jarades.biblioteca.mockdata.MockData;
 import com.jarades.biblioteca.resources.Book;
+import com.jarades.biblioteca.resources.Comment;
 
 import java.util.List;
 import java.util.Map;
@@ -30,5 +31,10 @@ public class BookDaoImpl implements BookDao {
     @Override
     public void register(Book book) {
         this.mockData.register(book);
+    }
+
+    @Override
+    public List<Comment> getBookComments(long id) {
+        return mockData.getBookComments(id);
     }
 }

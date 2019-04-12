@@ -1,5 +1,7 @@
 package com.jarades.biblioteca.resources;
 
+import java.util.Objects;
+
 public class Book {
 
     private long id;
@@ -57,4 +59,20 @@ public class Book {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
+
+/*
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return id == book.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+ */
 }
