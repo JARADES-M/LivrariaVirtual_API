@@ -16,19 +16,19 @@ public class ShoppingCartController {
     ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl();
 
     @ApiOperation(value = "Lista o items do Carrinho de Compras")
-    @RequestMapping(value = "v1/books/carrihod", method = RequestMethod.GET)
+    @RequestMapping(value = "v1/carriho", method = RequestMethod.GET)
     public List<Book> listItems() {
         return shoppingCartService.getItems();
     }
 
     @ApiOperation(value = "Adicionar um Livro ao Carrinho")
-    @RequestMapping(value = "v1/books/carrinho", method = RequestMethod.POST)
+    @RequestMapping(value = "v1/carrinho", method = RequestMethod.POST)
     public void addItem(@RequestBody Book book){
         shoppingCartService.addBook(book);
     }
 
     @ApiOperation(value = "Remove um livro do Carrinho")
-    @RequestMapping(value = "v1/books/carrinho/{bookId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "v1/carrinho/{bookId}", method = RequestMethod.DELETE)
     public void removeItem(@PathVariable(value = "bookId") int id) {
         shoppingCartService.removeBook(id);
     }

@@ -5,7 +5,7 @@ import com.jarades.biblioteca.resources.Order;
 import com.jarades.biblioteca.resources.Status;
 
 public interface OrderDao {
-    public Status getStatus(Order order);
+    public Status getStatus(int orderId);
     public void order(Book book);
-    public void cancelOrder(Order order);
+    public void cancelOrder(int orderId);
 }

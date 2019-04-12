@@ -33,7 +33,7 @@ http://127.0.0.1:8080/v1/books/
 - [x] Retornar os Comentários de um livro
 - [x] Postar comentários para livros. (resenhadas)
 - [ ] Pesquisa de livros por critérios diversos.
-- [ ] Manipular um carrinho de compras
+- [x] Manipular um carrinho de compras
 - [ ] Realizar pedidos
 - [ ] Acompanhamento o status das entregas realizadas.
 - [x] Cadastrar livros
