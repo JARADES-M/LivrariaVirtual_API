@@ -20,8 +20,14 @@ virtual deve ter pelo menos funcionalidades para:
 **POST** |`host/v1/books/{bookId}/comments` | _Realiza o cadastro de um comentário para o livro do **id** informado_
 
 Rodando a Aplicação localmente, a primeira requisição ficaria da seguinte forma.
-```sh
+```
 http://127.0.0.1:8080/v1/books/
+```
+A rodar a aplicação, a documentação estará disponível através do link {host}/swagger-ui.html
+
+Novamente, rodando localmente, fica da seguinte forma.
+```
+http://127.0.0.1:8080/swagger-ui.html
 ```
 
 > Este é o estágio inicial da aplicação, ainda não funcional.
@@ -32,7 +38,7 @@ http://127.0.0.1:8080/v1/books/
 - [x] Inclusão de Documentação (Swagger)
 - [x] Retornar os Comentários de um livro
 - [x] Postar comentários para livros. (resenhadas)
-- [ ] Pesquisa de livros por critérios diversos.
+- [x] Pesquisa de livros por critérios diversos.
 - [x] Manipular um carrinho de compras
 - [x] Realizar pedidos
 - [x] Acompanhamento o status das entregas realizadas.

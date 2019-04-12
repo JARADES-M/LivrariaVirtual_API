@@ -14,7 +14,7 @@ import java.util.List;
 
 @Api(value = "Order", tags = {"Pedidos"}, description = "Operações Rest")
 @RestController
-@RequestMapping(value = {"v1/pedidos", "v1/orders"})
+@RequestMapping(value = {"v1/orders"})
 public class OrderController implements OrderService{
 
     OrderService orderService = new OrderServiceImpl();

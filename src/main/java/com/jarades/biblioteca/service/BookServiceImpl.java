@@ -27,8 +27,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book find(Map<String, String> search) {
-        return null;
+    public List<Book> find(Map<String, String> search) {
+        return bookDao.find(search);
     }
 
     @Override

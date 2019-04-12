@@ -9,7 +9,7 @@ import java.util.Map;
 public interface BookDao {
     public void comment (Book book);
     public List<Book> getBooks();
-    public Book find (Map<String, String> search);
+    public List<Book> find (Map<String, String> search);
     public void register (Book book);
     public List<Comment> getBookComments (long id);
 }

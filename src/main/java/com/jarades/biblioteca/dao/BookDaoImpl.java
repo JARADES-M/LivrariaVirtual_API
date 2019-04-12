@@ -24,8 +24,8 @@ public class BookDaoImpl implements BookDao {
     }
 
     @Override
-    public Book find(Map<String, String> search) {
-        return null;
+    public List<Book> find(Map<String, String> search) {
+        return mockData.find(search);
     }
 
     @Override

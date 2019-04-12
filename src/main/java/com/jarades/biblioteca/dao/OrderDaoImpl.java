@@ -29,11 +29,11 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public void cancelOrder(int orderId) {
-
+        mockData.cancelOrder(orderId);
     }
 
     @Override
     public void updateStatus(Order order) {
-
+        mockData.updateStatus(order);
     }
 }

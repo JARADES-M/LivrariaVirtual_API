@@ -11,7 +11,7 @@ import java.util.List;
 
 @Api(value = "Shopping Cart Controller", tags = "Carrinho de Compras", description = "Controle do Carrinho de Compras")
 @RestController
-@RequestMapping(value = {"v1/carrinhos", "v1/carts"})
+@RequestMapping(value = {"v1/cart"})
 public class ShoppingCartController {
 
     ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl();

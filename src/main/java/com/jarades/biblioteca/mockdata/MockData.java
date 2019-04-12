@@ -2,8 +2,7 @@ package com.jarades.biblioteca.mockdata;
 
 import com.jarades.biblioteca.resources.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MockData {
 
@@ -85,6 +84,83 @@ public class MockData {
         return bookComments;
     }
 
+    public Order getOrder(int orderId) {
+        for (Order o: ordersList) {
+            if (o.getId() == orderId)
+                return o;
+        }
+        return null;
+    }
+
+    public void cancelOrder(int orderId) {
+        for (Order o: ordersList) {
+            if (o.getId() == orderId)
+                o.setStatus(Status.CANCELED);
+        }
+    }
+
+    public void updateStatus(Order order) {
+        for (Order o: ordersList){
+            if(o.getId() == order.getId()) {
+                ordersList.remove(o);
+                ordersList.add(order);
+            }
+        }
+    }
+
+    public List<Book> find(Map<String, String> search) {
+
+        List<Book> returnList = new ArrayList<>();
+
+        Set<String> searchKeys = search.keySet();
+
+        if(searchKeys.contains("bookId")){
+            for(Book bk: bookList){
+                if(bk.getId() == Integer.parseInt(search.get("bookId"))){
+                    returnList.add(bk);
+                }
+            }
+        } else {
+            boolean ttl = false;
+            boolean yr = false;
+            String comp = null;
+
+            if (searchKeys.contains("title")) {
+                ttl = true;
+            }
+            if (searchKeys.contains("year")) {
+                yr = true;
+            }
+
+            if (ttl && yr){
+                for (Book bk : bookList) {
+                    if (bk.getTitle().equals(search.get("title")) &&
+                        bk.getYear() == Integer.parseInt(search.get("year"))) {
+                        returnList.add(bk);
+                    }
+                }
+            } else {
+
+                if (searchKeys.contains("title")) {
+                    for (Book bk : bookList) {
+                        if (bk.getTitle().equals(search.get("title"))) {
+                            returnList.add(bk);
+                        }
+                    }
+                }
+                if (searchKeys.contains("year")) {
+                    for (Book bk : bookList) {
+                        if (bk.getYear() == Integer.parseInt(search.get("year"))) {
+                            returnList.add(bk);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        return returnList;
+    }
 // ----------------------------------------------------------------------------
 
     public List<User> getUserList() {
@@ -131,11 +207,4 @@ public class MockData {
         this.ordersList.add(order);
     }
 
-    public Order getOrder(int orderId) {
-        for (Order o: ordersList) {
-            if (o.getId() == orderId)
-                return o;
-        }
-        return null;
-    }
 }
