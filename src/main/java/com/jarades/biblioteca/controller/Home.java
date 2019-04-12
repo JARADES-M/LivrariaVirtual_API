@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("")
 public class Home {
 
     final String indexHtml = "<h1>Use a sua Ferramenta de escolha para operação desta API</h1>" +
@@ -18,7 +19,7 @@ public class Home {
             "<li>Cadastrar livros</li> </ul>" +
             "<p>Veja mais detalhes no <a target='_blank' href='https://github.com/JARADES-M/LivrariaVirtual_API'>GitHub</a>.</p>";
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
     public String index() {
         return this.indexHtml;

@@ -12,24 +12,25 @@ import java.util.List;
 
 @Api(value = "Rest API: Biblioteca", tags = {"Livro"}, description = "Operações Rest")
 @RestController
+@RequestMapping(value = {"/v1/books", "/v1/livros"})
 public class BookController {
 
     BookService bookService = new BookServiceImpl();
 
     @ApiOperation("Retorna os livros disponíveis")
-    @RequestMapping(value = "/v1/books", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public List<Book> getBooks(){
         return bookService.getBooks();
     }
 
     @ApiOperation("Registra um Livro")
-    @RequestMapping(value = "/v1/books", method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST)
     public void setBook(@RequestBody Book book) {
         bookService.register(book);
     }
 
     @ApiOperation("Retorna os comentários de um Livro")
-    @RequestMapping(value = "/v1/books/{bookId}/comments", method = RequestMethod.GET)
+    @RequestMapping(value = {"/{bookId}/comments", "/{bookId}/comentarios"}, method = RequestMethod.GET)
     public List<Comment> getBookComments(@PathVariable(value = "bookId") int id){
         return bookService.getBookComments(id);
     }

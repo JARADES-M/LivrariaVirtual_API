@@ -1,8 +1,6 @@
 package com.jarades.biblioteca.mockdata;
 
-import com.jarades.biblioteca.resources.Book;
-import com.jarades.biblioteca.resources.Comment;
-import com.jarades.biblioteca.resources.User;
+import com.jarades.biblioteca.resources.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +49,14 @@ public class MockData {
     private List<Book> shoppingCartList = new ArrayList<Book>() {
         {
             add(new Book(7755, "My Shop C", "Will", 2054, "Ypsilon"));
+        }
+    };
+
+    private List<Order> ordersList = new ArrayList<Order>() {
+        {
+            add(new Order(7676, bookList.get(0), Status.PENDING));
+            add(new Order(7476, bookList.get(3), Status.SHIPPED));
+            add(new Order(7673, bookList.get(2), Status.COMPLETED));
         }
     };
 
@@ -111,5 +117,25 @@ public class MockData {
 
     public void setShoppingCartList(List<Book> shoppingCartList) {
         this.shoppingCartList = shoppingCartList;
+    }
+
+    public List<Order> getOrdersList() {
+        return ordersList;
+    }
+
+    public void setOrdersList(List<Order> ordersList) {
+        this.ordersList = ordersList;
+    }
+
+    public void order(Order order) {
+        this.ordersList.add(order);
+    }
+
+    public Order getOrder(int orderId) {
+        for (Order o: ordersList) {
+            if (o.getId() == orderId)
+                return o;
+        }
+        return null;
     }
 }

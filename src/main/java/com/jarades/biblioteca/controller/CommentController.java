@@ -12,12 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Api(value = "Rest API: Biblioteca - comment", tags = {"Comentários"}, description = "Operações Rest")
 @RestController
+@RequestMapping({"/v1/comments", "/v1/comentarios"})
 public class CommentController {
 
     CommentService commentService = new CommentServiceImpl();
 
     @ApiOperation("Registra Um Comentário")
-    @RequestMapping(value = "/v1/comments", method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST)
     public void comment(@RequestBody Comment comment){
         commentService.comment(comment);
     }

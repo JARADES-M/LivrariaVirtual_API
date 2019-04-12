@@ -11,24 +11,25 @@ import java.util.List;
 
 @Api(value = "Shopping Cart Controller", tags = "Carrinho de Compras", description = "Controle do Carrinho de Compras")
 @RestController
+@RequestMapping(value = {"v1/carrinhos", "v1/carts"})
 public class ShoppingCartController {
 
     ShoppingCartService shoppingCartService = new ShoppingCartServiceImpl();
 
     @ApiOperation(value = "Lista o items do Carrinho de Compras")
-    @RequestMapping(value = "v1/carriho", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public List<Book> listItems() {
         return shoppingCartService.getItems();
     }
 
     @ApiOperation(value = "Adicionar um Livro ao Carrinho")
-    @RequestMapping(value = "v1/carrinho", method = RequestMethod.POST)
+    @RequestMapping(method = RequestMethod.POST)
     public void addItem(@RequestBody Book book){
         shoppingCartService.addBook(book);
     }
 
     @ApiOperation(value = "Remove um livro do Carrinho")
-    @RequestMapping(value = "v1/carrinho/{bookId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{bookId}", method = RequestMethod.DELETE)
     public void removeItem(@PathVariable(value = "bookId") int id) {
         shoppingCartService.removeBook(id);
     }
